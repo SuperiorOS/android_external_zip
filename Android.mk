@@ -10,7 +10,11 @@ LOCAL_C_INCLUDES := src src/unix
 LOCAL_CFLAGS := -O2 -Wall -DUNIX -D__BIONIC__ -DNO_LARGE_FILE_SUPPORT \
                 -DHAVE_DIRENT_H -DHAVE_TERMIOS_H
 
-LOCAL_CFLAGS += -Wno-error
+LOCAL_CFLAGS += \
+    -Wno-self-assign \
+    -Wno-unused-const-variable \
+    -Wno-unused-function \
+    -Wno-unused-parameter
 
 LOCAL_ARM_MODE := arm
 
